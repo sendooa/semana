@@ -230,11 +230,117 @@ button.num:hover b{color:var(--gold)}
 .cats div{display:grid;grid-template-columns:90px 1fr 54px;gap:10px;align-items:center}
 .cats em{font-style:normal;color:var(--muted);text-align:right;font-variant-numeric:tabular-nums;font-size:.74rem}
 .hint{font-size:.78rem;color:var(--faint);line-height:1.45}
+/* equipo */
+.team-on .fab{display:none}
+.team{display:flex;flex-direction:column;gap:20px;max-width:640px}
+.team section{display:flex;flex-direction:column;gap:10px}
+.tseg{display:flex;gap:6px;overflow-x:auto;scrollbar-width:none;margin:0 -2px;padding:0 2px 2px}
+.tseg::-webkit-scrollbar{display:none}
+.tseg button{border:1px solid var(--line2);border-radius:999px;padding:7px 13px;font-size:.8rem;color:var(--soft);white-space:nowrap;flex:none}
+.tseg button[aria-pressed="true"]{background:var(--fg);border-color:var(--fg);color:var(--bg)}
+.tseg.small button{font-size:.74rem;padding:6px 11px}
+.tseg.small button[aria-pressed="true"]{background:transparent;border-color:var(--gold);color:var(--fg)}
+.tcard{border:1px solid var(--line2);border-radius:18px;padding:16px;display:flex;flex-direction:column;gap:10px;background:var(--raise)}
+.tcard .big{font-family:var(--serif);font-weight:400;font-size:1.5rem;line-height:1.15}
+.tmeta{display:flex;flex-wrap:wrap;gap:4px 12px;font-size:.78rem;color:var(--soft)}
+.tmeta span+span::before{content:"·";margin-right:12px;color:var(--faint)}
+.tl{display:flex;height:8px;border-radius:4px;overflow:hidden;gap:2px;background:var(--line)}
+.tl span{display:block;height:100%}
+.trow2{display:flex;gap:8px;flex-wrap:wrap}.trow2>*{flex:1 1 130px}
+.tbtn{background:var(--gold);color:var(--gold-ink);border-radius:12px;padding:11px 14px;font-weight:600;font-size:.86rem;text-align:center}
+.tbtn.ghost{background:transparent;color:var(--soft);border:1px solid var(--line2);font-weight:500}
+.focus .tbtn{align-self:flex-start;margin-top:4px}
+.talert{display:flex;gap:12px;align-items:flex-start;padding:11px 0;border-top:1px solid var(--line);font-size:.86rem;color:var(--soft);line-height:1.45}
+.talert:first-child{border-top:0;padding-top:0}
+.talert i{width:8px;height:8px;border-radius:50%;margin-top:6px;flex:none}
+.talert b{color:var(--fg);font-weight:500}
+.tsh{display:flex;justify-content:space-between;align-items:baseline;gap:10px}
+.tsh button{font-size:.78rem;color:var(--gold)}
+.attop{display:flex;justify-content:space-between;align-items:flex-end;gap:12px}
+.attop b{font-family:var(--serif);font-weight:400;font-size:2.6rem;line-height:1;font-variant-numeric:tabular-nums}
+.attop b small{font-size:1rem;color:var(--muted)}
+.attop label{display:flex;flex-direction:column;gap:4px;align-items:flex-end}
+.team input[type=date]{font:inherit;font-size:16px;color:var(--fg);background:var(--raise);border:1px solid var(--line2);border-radius:10px;padding:6px 8px}
+.attgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(96px,1fr));gap:8px}
+.chip{border:1px solid var(--line2);border-radius:14px;padding:10px 8px 9px;display:flex;flex-direction:column;align-items:center;gap:5px;min-width:0}
+.chip .n{font-size:.62rem;color:var(--muted);font-variant-numeric:tabular-nums;min-height:.8em}
+.chip .nm{font-size:.86rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:100%}
+.chip .st{font-size:.6rem;letter-spacing:.08em;text-transform:uppercase;color:var(--faint)}
+.chip[data-s="si"]{border-color:rgba(127,207,165,.55);background:rgba(127,207,165,.09)}
+.chip[data-s="si"] .st{color:var(--c-salud)}
+.chip[data-s="no"]{border-color:rgba(224,122,111,.5)}
+.chip[data-s="no"] .st{color:var(--danger)}
+.chip[data-s="just"]{border-color:rgba(227,180,106,.5)}
+.chip[data-s="just"] .st{color:var(--c-casa)}
+.pl{display:flex;flex-direction:column}
+.pr{display:flex;align-items:center;gap:12px;padding:11px 0;border-top:1px solid var(--line);text-align:left;width:100%}
+.pr:first-child{border-top:0}
+.dor{width:34px;height:34px;border-radius:50%;border:1px solid var(--line2);display:grid;place-items:center;font-family:var(--serif);font-size:1rem;flex:none;font-variant-numeric:tabular-nums}
+.pr .who{flex:1;min-width:0;display:flex;flex-direction:column;gap:2px}
+.pr .who b{font-family:var(--serif);font-weight:400;font-size:1.08rem;overflow-wrap:anywhere}
+.pr .who small{font-size:.7rem;color:var(--muted)}
+.pct{width:64px;flex:none;display:flex;flex-direction:column;align-items:flex-end;gap:5px;font-size:.78rem;font-variant-numeric:tabular-nums}
+.pct .track{width:100%;height:4px;border-radius:2px;background:var(--line2);overflow:hidden}
+.pct .track span{display:block;height:100%}
+.ttot{display:flex;justify-content:space-between;align-items:baseline;gap:10px;font-size:.8rem;color:var(--muted)}
+.ttot b{font-family:var(--serif);font-weight:400;font-size:1.5rem;color:var(--fg);font-variant-numeric:tabular-nums}
+.ttot b small{font-family:var(--sans);font-size:.78rem;color:var(--muted)}
+.ttot .pn{font-family:var(--serif);font-size:1.35rem;color:var(--fg)}
+.sess{display:flex;flex-direction:column}
+.si{display:flex;align-items:center;gap:10px;padding:9px 0;border-top:1px solid var(--line)}
+.si:first-child{border-top:0}
+.si .tm{width:40px;flex:none;font-size:.72rem;color:var(--muted);font-variant-numeric:tabular-nums}
+.si .tt{flex:1;min-width:0;display:flex;flex-direction:column;gap:2px;text-align:left}
+.si .tt b{font-weight:500;font-size:.9rem}
+.si .tt small{font-size:.7rem;color:var(--muted);display:flex;gap:6px;align-items:center}
+.si .tt small i{width:6px;height:6px;border-radius:50%}
+.mv{display:flex;gap:2px;flex:none}
+.mv button{width:28px;height:28px;border-radius:7px;color:var(--muted);font-size:.85rem}
+.mv button:hover{background:var(--line);color:var(--fg)}
+.lib{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px}
+.ej{border:1px solid var(--line2);border-radius:16px;overflow:hidden;display:flex;flex-direction:column;min-width:0;text-align:left;background:var(--raise)}
+.ej:hover{border-color:var(--gold)}
+.ej svg,.exfig svg{display:block;width:100%;height:auto;background:#2a3a30}
+.exfig{border-radius:14px;overflow:hidden}
+.ej .bd{padding:10px 11px 11px;display:flex;flex-direction:column;gap:4px}
+.ej .bd b{font-weight:500;font-size:.86rem;line-height:1.25}
+.ej .bd small{font-size:.68rem;color:var(--muted);line-height:1.35}
+.ej .add{display:flex;justify-content:space-between;font-size:.72rem;color:var(--gold);margin-top:3px}
+.ej .add span{color:var(--soft);font-variant-numeric:tabular-nums}
+.how{display:flex;flex-direction:column;gap:6px}
+.sheet .how p{color:var(--soft);font-size:.92rem}
+.res{display:flex;flex-direction:column}
+.rr{display:flex;gap:12px;align-items:center;padding:11px 0;border-top:1px solid var(--line);text-align:left;width:100%}
+.rr:first-child{border-top:0}
+.rr .sc{font-family:var(--serif);font-size:1.35rem;width:56px;flex:none;font-variant-numeric:tabular-nums;text-align:center;display:flex;flex-direction:column;line-height:1.05}
+.rr .sc small{font-family:var(--sans);font-size:.62rem;color:var(--muted);letter-spacing:.06em}
+.rr .tx{flex:1;min-width:0;display:flex;flex-direction:column;gap:3px}
+.rr .tx b{font-weight:500;font-size:.9rem}
+.rr .tx small{font-size:.72rem;color:var(--muted);line-height:1.4;overflow-wrap:anywhere}
+.wl{font-size:.6rem;letter-spacing:.08em;text-transform:uppercase;border-radius:999px;padding:2px 7px;flex:none;border:1px solid var(--line2)}
+.wl.v{color:var(--c-salud);border-color:rgba(127,207,165,.45)}
+.wl.e{color:var(--soft)}
+.wl.d{color:var(--danger);border-color:rgba(224,122,111,.45)}
+.rate{display:flex;flex-direction:column}
+.rt{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:9px 0;border-top:1px solid var(--line);font-size:.88rem}
+.rt:first-child{border-top:0}
+.rt small{font-size:.68rem;color:var(--muted)}
+.dots{display:flex;gap:6px;flex:none}
+.dots button{width:28px;height:28px;border-radius:50%;border:1px solid var(--line2);font-size:.72rem;color:var(--muted);font-variant-numeric:tabular-nums}
+.dots button.on{background:var(--gold);border-color:var(--gold);color:var(--gold-ink);font-weight:600}
+.tnote,.sheet textarea{font:inherit;font-size:16px;color:var(--fg);background:var(--bg);border:1px solid var(--line2);border-radius:12px;padding:10px;width:100%;box-sizing:border-box;resize:vertical}
+.tnote:focus,.sheet textarea:focus{outline:none;border-color:var(--gold)}
+.sheet input[type=number],.sheet input[type=tel]{font:inherit;font-size:16px;color:var(--fg);background:var(--bg);border:1px solid var(--line2);border-radius:12px;padding:10px;width:100%;box-sizing:border-box;min-width:0;min-height:44px}
+.sheet input[type=number]:focus,.sheet input[type=tel]:focus{outline:none;border-color:var(--gold)}
+.tform{display:flex;flex-direction:column;gap:14px}
+.ttop{display:flex;align-items:center;gap:12px}
+.ttop h2{flex:1;min-width:0}
+.ttop .x{width:32px;height:32px;border-radius:50%;border:1px solid var(--line2);color:var(--soft);flex:none}
 /* ordenador */
 .desk .wrap{max-width:1240px;padding-left:max(32px,env(safe-area-inset-left,0px));padding-right:max(32px,env(safe-area-inset-right,0px))}
 .desk header .wk{display:none}
 .desk #vWeek,.desk #vSum,.desk .views .prog{display:none}
-.desk header .views{max-width:200px}
+.desk header .views{max-width:280px}
 .desk header .wrap{padding-block:26px 18px;border-bottom:1px solid var(--line)}
 .desk .hd h1{font-size:2.6rem}
 .desk main .wrap{padding-block:26px 80px}
@@ -338,6 +444,7 @@ button.num:hover b{color:var(--gold)}
       <button id="vWeek" aria-pressed="false">Semana</button>
       <button id="vSum" aria-pressed="false">Resumen</button>
       <button id="vLife" aria-pressed="false">Vida</button>
+      <button id="vTeam" aria-pressed="false">Equipo</button>
       <span class="prog" id="prog"></span>
     </div>
   </div>
@@ -634,6 +741,7 @@ button.num:hover b{color:var(--gold)}
     if (view === "day") h1.append(selLabel+" ", el("em",null,String(sel.getDate())));
     else if (view === "sum") h1.append("Tu ", el("em",null,"semana"));
     else if (view === "vida") h1.append("Mi ", el("em",null,"vida"));
+    else if (view === "equipo") h1.append("Mi ", el("em",null,"equipo"));
     else h1.append(cap(MONL[weekStart.getMonth()]));
     $("weekCap").textContent = view === "day" ? `${MONL[sel.getMonth()]} · semana ${isoWeek(sel)}` : `semana ${isoWeek(weekStart)}`;
 
@@ -651,11 +759,14 @@ button.num:hover b{color:var(--gold)}
     $("vWeek").setAttribute("aria-pressed", String(view==="week"));
     $("vSum").setAttribute("aria-pressed", String(view==="sum"));
     $("vLife").setAttribute("aria-pressed", String(view==="vida"));
+    $("vTeam").setAttribute("aria-pressed", String(view==="equipo"));
 
     const c = $("content"); c.textContent = "";
     const wide = DESK.matches;
     document.body.classList.toggle("desk", wide);
-    document.body.classList.toggle("life-on", view === "vida");
+    document.body.classList.toggle("life-on", view === "vida" || view === "equipo");
+    document.body.classList.toggle("team-on", view === "equipo");
+    if (view === "equipo") { $("weekCap").textContent = tCfg().name || "Entrenos"; renderTeam(c); return; }
     if (view === "vida") { $("weekCap").textContent = `${MONL[new Date().getMonth()]} ${new Date().getFullYear()}`; renderLife(c); return; }
     if (wide) {
       h1.textContent = ""; h1.append(selLabel+" ", el("em",null,String(sel.getDate())));
@@ -1029,6 +1140,452 @@ button.num:hover b{color:var(--gold)}
     c.append(box);
   }
 
+  // ================= EQUIPO =================
+  // Datos en items ocultos _e_*: players, cfg, att, sess, myex, matches, rate. Se sincronizan igual que el resto.
+  const T_CAT = {cal:['Calentamiento','#8fa3ff'], con:['Conducción','#7fcfa5'], pas:['Pase y control','#5fc4d0'], tir:['Tiro','#e07a6f'], reg:['Regate','#b79cf0'], jue:['Juegos','#e3b46a'], par:['Partidillo','#d98fc0'], vc:['Vuelta a la calma','#8d8994']};
+  // plantillas de dibujo: conos (c), jugadores (p), rivales (r), balones (b), flechas (a: [x1,y1,x2,y2]), porterías (g)
+  const T_SQ = [[14,14],[106,14],[14,76],[106,76]];
+  const T_D = {
+  libre:  ()=>({c:T_SQ, p:[[35,30],[62,48],[88,32],[42,64],[82,62]], b:[[40,33],[67,51],[93,35],[47,67],[87,65]]}),
+  pilla:  ()=>({c:T_SQ, p:[[35,30],[88,32],[42,64],[82,62],[60,25]], r:[[60,50]], a:[[62,48,80,60]]}),
+  slalom: ()=>({c:[[25,45],[42,30],[59,60],[76,30],[93,60],[110,45]], a:[[12,45,23,45]], p:[[10,45]], b:[[14,48]]}),
+  zigzag: ()=>({c:[[20,25],[45,65],[70,25],[95,65]], a:[[20,25,43,62],[47,62,68,28],[72,28,93,62]], p:[[12,25]]}),
+  relevos:()=>({p:[[14,30],[20,30],[26,30],[14,62],[20,62],[26,62]], c:[[100,30],[100,62]], a:[[30,30,96,30],[96,34,32,34],[30,62,96,62]]}),
+  colores:()=>({c:T_SQ.concat([[60,14],[60,76]]), p:[[60,45]], b:[[64,48]], a:[[60,45,20,18],[60,45,100,72]]}),
+  parejas:()=>({p:[[25,25],[95,25],[25,65],[95,65]], a:[[30,25,90,25],[90,65,30,65]], b:[[30,28]]}),
+  puertas:()=>({c:[[40,22],[40,32],[80,22],[80,32],[55,58],[55,68],[95,58],[95,68]], p:[[20,27],[60,27],[35,63],[110,63]], a:[[24,27,56,27],[40,63,106,63]]}),
+  triang: ()=>({p:[[30,70],[90,70],[60,20]], c:[[30,70],[90,70],[60,20]], a:[[34,70,86,70],[88,66,62,24],[58,24,32,66]]}),
+  largo:  ()=>({p:[[20,45]], c:[[85,30],[110,30],[85,60],[110,60]], a:[[24,45,96,45]], b:[[24,48]]}),
+  tiro:   ()=>({g:[[110,45]], r:[[107,45]], p:[[55,45]], b:[[60,45]], a:[[62,45,100,45]], c:[[55,30],[55,60]]}),
+  condtiro:()=>({g:[[110,45]], r:[[107,45]], p:[[15,45]], c:[[35,45],[50,45],[65,45]], a:[[18,45,70,45],[72,45,100,42]]}),
+  pasetiro:()=>({g:[[110,45]], r:[[107,45]], p:[[50,70],[75,30]], a:[[54,68,72,34],[78,32,100,42]]}),
+  conos:  ()=>({c:[[95,20],[95,35],[95,50],[95,65]], p:[[25,25],[25,45],[25,65]], a:[[30,45,90,35]], b:[[30,48]]}),
+  penalti:()=>({g:[[110,45]], r:[[107,45]], p:[[80,45]], b:[[86,45]], c:[[30,30],[30,60]]}),
+  unouno: ()=>({g:[[110,45]], p:[[25,45]], r:[[70,45]], b:[[30,48]], a:[[30,45,66,38]]}),
+  linea:  ()=>({c:[[100,14],[100,76],[20,14],[20,76]], p:[[30,45]], r:[[70,45]], a:[[34,45,96,30]]}),
+  tiburon:()=>({c:T_SQ, p:[[35,30],[88,32],[42,64],[82,62]], b:[[40,33],[93,35],[47,67],[87,65]], r:[[62,48],[55,35]]}),
+  protege:()=>({c:[[30,30],[90,30],[30,60],[90,60]], p:[[50,45],[80,45]], r:[[58,45],[88,45]], b:[[46,45],[76,45]]}),
+  rondo:  ()=>({c:[[30,20],[90,20],[30,70],[90,70]], p:[[30,20],[90,20],[30,70],[90,70]], r:[[60,45]], a:[[34,24,86,66],[86,24,60,70]]}),
+  diezpases:()=>({c:T_SQ, p:[[35,30],[62,60],[90,35]], r:[[50,45],[78,50],[60,25]], a:[[38,32,60,58],[64,58,88,37]]}),
+  cuatrop:()=>({g:[[10,30],[10,60],[110,30],[110,60]], p:[[35,30],[45,60]], r:[[75,35],[80,60]], b:[[50,45]]}),
+  partido:()=>({g:[[10,45],[110,45]], p:[[30,30],[40,60],[50,40]], r:[[70,30],[80,55],[90,45]], b:[[60,45]]}),
+  circulo:()=>({p:[[40,30],[60,22],[80,30],[86,50],[45,62],[60,68],[75,62],[34,50]]}),
+  };
+  const T_EX = [
+  // Calentamiento
+  {id:'e1',  c:'cal', t:'Pilla-pilla con balón en la mano', m:10, mat:'4 conos', d:'pilla', h:'Uno la liga y los demás corren dentro del cuadrado con el balón en las manos. Si te pilla, la ligas tú.', f:'Haz el cuadrado más grande para que sea más fácil escapar.', o:'Un entrenador la liga primero y luego va cambiando. Cuadrado de 15×15 pasos.'},
+  {id:'e2',  c:'cal', t:'Semáforo', m:8, mat:'1 balón por niño', d:'libre', h:'Todos conducen por el cuadrado. Verde: rápido. Amarillo: despacio. Rojo: pie encima del balón.', f:'Empieza sin balón, corriendo, y luego añade el balón.', o:'Los 12 con balón. Un entrenador canta los colores.'},
+  {id:'e3',  c:'cal', t:'El espejo', m:8, mat:'Ninguno', d:'parejas', h:'Por parejas, uno frente al otro. Uno se mueve (salta, corre de lado, se agacha) y el otro le copia.', f:'Movimientos lentos al principio.', o:'6 parejas: cada entrenador se pone con un niño.'},
+  {id:'e4',  c:'cal', t:'Carrera con cambios de ritmo', m:10, mat:'6 conos', d:'zigzag', h:'Corren de cono a cono: trote suave, y en cada cono un sprint corto hasta el siguiente.', f:'Pocos conos y muy cerca.', o:'2 filas de 6: 5 niños y un entrenador al final de cada una.'},
+  {id:'e5',  c:'cal', t:'Rondo 4 contra 1', m:15, mat:'4 conos, 1 balón', d:'rondo', h:'Cuatro en las esquinas se pasan el balón y uno en el medio intenta tocarlo. Si lo toca, cambia con quien lo perdió.', f:'Primero con las manos, después con los pies.', o:'2 rondos de 5 contra 1, un entrenador en cada rondo. Al principio, el del medio sois vosotros.'},
+  {id:'e6',  c:'cal', t:'Toques con la suela', m:8, mat:'1 balón por niño', d:'libre', h:'Cada uno con su balón, tocarlo con la suela alternando pies, sin moverse del sitio. Luego avanzar despacito.', f:'Contar toques en voz alta para que se concentren.', o:'Los 12 a la vez, cada uno con su balón.'},
+  // Conducción
+  {id:'e7',  c:'con', t:'Slalom entre conos', m:15, mat:'6 conos por fila, balones', d:'slalom', h:'Conducen el balón pasando entre los conos sin tirarlos y vuelven corriendo a la fila.', f:'Separa más los conos.', o:'2 filas de 5 niños, un entrenador en cada slalom corrigiendo.'},
+  {id:'e8',  c:'con', t:'Conducir sin chocar', m:10, mat:'4 conos, 1 balón por niño', d:'libre', h:'Todos conducen dentro del cuadrado mirando hacia arriba para no chocar. Cada vez más pequeño el cuadrado.', f:'Cuadrado grande y pocos niños a la vez.', o:'Los 12 a la vez en un cuadrado de 15×15 pasos.'},
+  {id:'e9',  c:'con', t:'Interior y exterior', m:10, mat:'2 conos, balones', d:'zigzag', h:'Conducen hasta el cono solo con el interior del pie, y vuelven solo con el exterior.', f:'Andando primero, luego trotando.', o:'2 filas de 5, un entrenador en cada fila marcando el ejemplo.'},
+  {id:'e10', c:'con', t:'¡Para el balón!', m:8, mat:'1 balón por niño', d:'libre', h:'Conducen libres. Al pitar, pisan el balón con la suela y se quedan quietos. El último hace 2 saltos.', f:'Pita despacio al principio.', o:'Los 10 niños con balón; un entrenador pita y el otro conduce con ellos.'},
+  {id:'e11', c:'con', t:'Relevos conduciendo', m:15, mat:'2 conos, 2 balones', d:'relevos', h:'Dos equipos en fila. Conducen hasta el cono, lo rodean y entregan el balón al siguiente. Gana la fila que acaba antes.', f:'Que la distancia sea corta.', o:'2 equipos de 5 niños + 1 entrenador. Cono a 10 pasos.'},
+  {id:'e12', c:'con', t:'Rodear el cono', m:10, mat:'Conos, balones', d:'zigzag', h:'Conducen hasta un cono, giran alrededor con la planta del pie y siguen al siguiente.', f:'Girar por un solo lado al principio.', o:'2 filas de 5, cada una con su entrenador delante para hacerlo primero.'},
+  {id:'e13', c:'con', t:'Los colores', m:10, mat:'Conos de 4 colores', d:'colores', h:'Conducen por el centro. Dices un color y van conduciendo hasta ese cono lo más rápido posible.', f:'Solo 2 colores al principio.', o:'Los 10 conducen; un entrenador canta colores y el otro corrige.'},
+  // Pase y control
+  {id:'e14', c:'pas', t:'Pases por parejas', m:15, mat:'1 balón por pareja', d:'parejas', h:'A 5 pasos, se pasan el balón con el interior del pie. Se para con la planta y se vuelve a pasar.', f:'Más cerca y con la mano para parar si hace falta.', o:'6 parejas: 4 de niños y 2 con un entrenador (cambiad de pareja cada 3 minutos).'},
+  {id:'e15', c:'pas', t:'Pasar por las porterías', m:15, mat:'Muchos conos, 1 balón por pareja', d:'puertas', h:'Hay porterías pequeñas de conos por el campo. Las parejas buscan una libre y se pasan a través de ella. ¿Cuántas en 2 minutos?', f:'Porterías más anchas.', o:'6 parejas (2 con entrenador) y 7 porterías de conos.'},
+  {id:'e16', c:'pas', t:'Pase en triángulo', m:15, mat:'3 conos, 1 balón', d:'triang', h:'Tres niños en un triángulo. Pasan y corren al cono al que han pasado.', f:'Sin correr detrás del pase al principio.', o:'4 tríos, cada entrenador en uno.'},
+  {id:'e17', c:'pas', t:'Controla y pasa', m:10, mat:'1 balón por pareja', d:'parejas', h:'Recibes, paras con la planta, miras al compañero y pasas. Dos toques siempre.', f:'Permite tres toques.', o:'6 parejas, 2 de ellas con entrenador.'},
+  {id:'e18', c:'pas', t:'Pase a la zona', m:15, mat:'4 conos, balones', d:'largo', h:'Pasan fuerte intentando que el balón se pare dentro de un cuadrado de conos a 10 pasos.', f:'Acerca el cuadrado.', o:'6 parejas, 2 con entrenador. Cada una con su cuadrado a 10 pasos.'},
+  {id:'e19', c:'pas', t:'Pared con el entrenador', m:15, mat:'Balones', d:'parejas', h:'El niño te pasa, tú se la devuelves y la controla en carrera. Cambia de pie cada vez.', f:'Devuélvela despacio y a los pies.', o:'Fila de 9 niños y el portero en la portería. Un entrenador hace de pared y el otro recoge balones.'},
+  // Tiro
+  {id:'e20', c:'tir', t:'Tiro con balón parado', m:15, mat:'Portería, balones', d:'tiro', h:'Balón quieto a 6 pasos. Tiran con el interior buscando las esquinas.', f:'Más cerca y sin portero.', o:'Fila de 9 niños y el portero en la portería. Un entrenador recoge balones y el otro corrige el golpeo.'},
+  {id:'e21', c:'tir', t:'Conducir y tirar', m:15, mat:'Portería, 3 conos, balones', d:'condtiro', h:'Conducen entre conos y al pasar el último tiran a puerta.', f:'Sin conos, solo conducir recto y tirar.', o:'2 filas de 5 contra la misma portería. Un entrenador de portero.'},
+  {id:'e22', c:'tir', t:'Tiro tras pase', m:15, mat:'Portería, balones', d:'pasetiro', h:'Les pasas el balón de lado. Controlan y tiran.', f:'Que tiren de primeras solo cuando ya lo dominen.', o:'Fila de 9 niños y el portero en la portería. Un entrenador da los pases.'},
+  {id:'e23', c:'tir', t:'Derribar conos', m:15, mat:'Conos o botellas, balones', d:'conos', h:'Conos en una línea. Desde 5 pasos intentan tirarlos a balonazos.', f:'Conos más grandes o más cerca.', o:'2 equipos de 5 niños + 1 entrenador. Gana el que más conos tire en 3 rondas.'},
+  {id:'e24', c:'tir', t:'Penaltis por equipos', m:10, mat:'Portería, 1 balón', d:'penalti', h:'Dos equipos. Cada niño tira un penalti y todos pasan por la portería.', f:'Punto de penalti más cerca.', o:'2 equipos de 5. Un entrenador de portero y el otro lleva la cuenta.'},
+  {id:'e25', c:'tir', t:'Slalom y gol', m:15, mat:'Portería, conos, balones', d:'condtiro', h:'Slalom de 4 conos y al salir, tiro a puerta. El portero cambia cada 3 tiros.', f:'Pocos conos y portería sin portero.', o:'2 filas de 5, una a cada lado. Un entrenador de portero.'},
+  // Regate
+  {id:'e26', c:'reg', t:'Uno contra uno', m:15, mat:'Portería pequeña, balones', d:'unouno', h:'Uno ataca con balón y otro defiende. Hay que meter gol en la portería pequeña.', f:'El defensor empieza más lejos.', o:'5 parejas de niños rotando. Los entrenadores defendéis a ratos, sin quitarla del todo.'},
+  {id:'e27', c:'reg', t:'El tiburón', m:10, mat:'4 conos, balones', d:'tiburon', h:'Todos conducen y dos tiburones sin balón intentan sacar los balones del cuadrado. El que lo pierde, se hace tiburón.', f:'Solo un tiburón.', o:'Los 10 con balón y vosotros 2 de tiburones (dejaos ganar alguna).'},
+  {id:'e28', c:'reg', t:'Engañar al cono', m:10, mat:'Conos, balones', d:'slalom', h:'Conducen hacia un cono, hacen como que van a un lado y salen por el otro.', f:'Enséñalo andando primero.', o:'2 filas de 5, un entrenador en cada fila haciendo de defensa quieto.'},
+  {id:'e29', c:'reg', t:'Cruzar la línea', m:15, mat:'4 conos, balones', d:'linea', h:'El atacante tiene que pasar la línea del otro lado con el balón controlado. El defensor intenta quitárselo.', f:'Campo más ancho.', o:'5 parejas en 2 pasillos. Los entrenadores defendéis algunos turnos.'},
+  {id:'e30', c:'reg', t:'Protege el balón', m:10, mat:'Conos, 1 balón por pareja', d:'protege', h:'Uno guarda el balón poniendo el cuerpo delante. El otro intenta tocarlo. 30 segundos y cambio.', f:'El que defiende no puede usar las manos ni empujar.', o:'5 parejas de niños; los entrenadores rotáis para enseñar a poner el cuerpo.'},
+  // Juegos
+  {id:'e31', c:'jue', t:'Los cinco pases', m:15, mat:'4 conos, petos, 1 balón', d:'diezpases', h:'Dos equipos. Hay que darse 5 pases seguidos sin que el otro la toque. Cada 5 pases es un punto.', f:'Con 5 pases es punto.', o:'6 contra 6: 5 niños + 1 entrenador por equipo. El entrenador solo pasa, no tira.'},
+  {id:'e32', c:'jue', t:'Fútbol a 4 porterías', m:15, mat:'4 porterías de conos, petos', d:'cuatrop', h:'Cada equipo ataca dos porterías pequeñas. Obliga a mirar y cambiar de lado.', f:'Porterías más anchas.', o:'6 contra 6: 5 niños + 1 entrenador por equipo, sin porteros.'},
+  {id:'e33', c:'jue', t:'Balón prisionero con los pies', m:15, mat:'Conos, 2 balones blandos', d:'diezpases', h:'Como el balón prisionero, pero se pasa y se lanza con el pie, por abajo.', f:'Con balón blando y campo pequeño.', o:'6 contra 6: 5 niños + 1 entrenador por equipo.'},
+  {id:'e34', c:'jue', t:'La cola del zorro', m:10, mat:'Petos, balones', d:'libre', h:'Cada uno lleva un peto en el pantalón y conduce. Intentan quitar colas sin perder su balón.', f:'Sin balón al principio.', o:'Los 12 con balón y peto, vosotros también.'},
+  {id:'e35', c:'jue', t:'El rey del cuadrado', m:10, mat:'4 conos, balones', d:'tiburon', h:'Todos conducen y a la vez intentan sacar los balones de los otros fuera del cuadrado. El último que queda es el rey.', f:'Quien sale vuelve a entrar haciendo 5 toques.', o:'Los 10 niños. Los que salen se ponen con vosotros a hacer toques hasta volver.'},
+  {id:'e36', c:'jue', t:'Pasarse con las manos', m:10, mat:'Petos, 1 balón', d:'diezpases', h:'Partido con las manos: pasarse y llegar a la línea del rival. Enseña a moverse para recibir.', f:'Sin defensa durante el primer minuto.', o:'6 contra 6: 5 niños + 1 entrenador por equipo.'},
+  {id:'e44', c:'jue', t:'Pies quietos con balón', m:10, mat:'1 balón blando', d:'libre', h:'Como el juego de siempre: dices un nombre, ese coge el balón con los pies y los demás huyen. Al gritar ¡pies quietos!, intenta dar a alguien con un pase raso.', f:'Que pueda dar 3 pasos conduciendo antes de pasar.', o:'Los 12 a la vez, los entrenadores también.'},
+  {id:'e45', c:'jue', t:'Gol al entrenador', m:10, mat:'Portería, balones', d:'penalti', h:'Tú eres el portero. Cada vez que te marcan, el equipo suma un punto. Les encanta.', f:'Déjate marcar de vez en cuando.', o:'Un entrenador en portería y 2 equipos de 5 niños tirando por turnos. El otro entrenador lleva la cuenta.'},
+  {id:'e46', c:'jue', t:'Los bolos', m:10, mat:'6 conos, balones', d:'conos', h:'Ponen conos como bolos y los tiran con un pase raso con el interior. Gana quien tire más en 3 turnos.', f:'Más cerca.', o:'2 equipos de 5 niños + 1 entrenador, cada uno con sus bolos.'},
+  // Partidillo
+  {id:'e37', c:'par', t:'Partidillo 4 contra 4', m:15, mat:'2 porterías pequeñas, petos', d:'partido', h:'Sin porteros y en campo pequeño. Todos tocan mucho el balón.', f:'Si hay mucha diferencia, cambia los equipos.', o:'4 contra 4 y 2 niños descansan haciendo toques con un entrenador. El otro arbitra. Cambio cada 4 minutos.'},
+  {id:'e38', c:'par', t:'Partidillo con comodín', m:15, mat:'Porterías, petos', d:'partido', h:'Un niño con peto distinto juega siempre con el equipo que tiene el balón.', f:'Pon de comodín al que más le cuesta, para que toque mucho.', o:'4 contra 4 + el portero en la portería que rota. Un entrenador es el comodín y el otro corrige.'},
+  {id:'e39', c:'par', t:'Gol tras 3 pases', m:15, mat:'Porterías, petos', d:'partido', h:'Solo vale el gol si el equipo se ha dado antes 3 pases.', f:'Con 2 pases vale.', o:'6 contra 6: 5 niños + 1 entrenador por equipo (el entrenador no marca).'},
+  {id:'e40', c:'par', t:'Partido 5 contra 5', m:15, mat:'Porterías, petos', d:'partido', h:'Partido con porteros, como el del sábado. Para un momento si hay algo que corregir.', f:'Para el juego pocas veces, que jueguen.', o:'5 contra 5 con porteros: el portero en un equipo y un niño en el otro. Vosotros arbitráis y corregís.'},
+  // Vuelta a la calma
+  {id:'e41', c:'vc', t:'Estiramientos en círculo', m:10, mat:'Ninguno', d:'circulo', h:'En círculo, cada niño dice un estiramiento y todos lo hacen contando hasta 10.', f:'Tú dices los estiramientos.', o:'Los 12 en círculo, un entrenador dirige.'},
+  {id:'e42', c:'vc', t:'Charla de cierre', m:5, mat:'Ninguno', d:'circulo', h:'Sentados: qué hemos aprendido hoy y qué ha salido bien. Una cosa buena de cada uno.', f:'Pregunta solo a 3 o 4 cada día.', o:'Los 10 sentados en círculo y vosotros 2 con ellos.'},
+  {id:'e43', c:'vc', t:'Recoger a contrarreloj', m:5, mat:'Todo el material', d:'libre', h:'Todos recogen conos y balones. Si lo hacen en menos de 2 minutos, reto conseguido.', f:'Cada niño recoge un tipo de material.', o:'Los 12. Cada uno recoge un tipo de material.'},
+  ];
+  const T_POS = {POR:"Portero", DEF:"Defensa", MED:"Medio", DEL:"Delantero"};
+  const T_AREAS = ["Técnica","Actitud","Esfuerzo","Compañerismo"];
+  const tGet = (k, d) => JSON.parse(JSON.stringify(items["_e_"+k] || d));
+  const tPut = (k, v) => { items["_e_"+k] = v; store.save("_e_"+k); };
+  const tSet = (k, v) => { tPut(k, v); render(); };
+  const esc = s => String(s == null ? "" : s).replace(/[&<>"']/g, ch => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[ch]));
+  const tid = () => Math.random().toString(36).slice(2,9);
+  let tTab = "hoy", tCatF = "todos", tProg = null, tListDate = null;
+
+  const tPlayers = () => tGet("players", {list:[]}).list.sort((a,b) => (Number(a.d)||99) - (Number(b.d)||99) || a.n.localeCompare(b.n));
+  const tCfg = () => Object.assign({days:[], ini:"", fin:"", name:""}, tGet("cfg", {}));
+  const tLen = cfg => (cfg.ini && cfg.fin && mins(cfg.fin) > mins(cfg.ini)) ? mins(cfg.fin) - mins(cfg.ini) : 60;
+  const tAllEx = () => T_EX.concat(tGet("myex", {list:[]}).list);
+  const tEx = id => tAllEx().find(e => e.id === id);
+  const tFmt = d => { const x = parse(d); return `${cap(DLONG[wdOf(x)])} ${x.getDate()} de ${MONL[x.getMonth()]}`; };
+  const tYM = () => todayISO().slice(0,7);
+
+  function tNext(){
+    const cfg = tCfg(); if (!cfg.days.length) return null;
+    const t = parse(todayISO());
+    for (let i = 0; i < 14; i++) {
+      const d = addDays(t, i);
+      if (!cfg.days.includes(wdOf(d))) continue;
+      if (i === 0 && cfg.fin && nowMins() > mins(cfg.fin)) continue;
+      return iso(d);
+    }
+    return null;
+  }
+  function tAttStats(pid){
+    const att = tGet("att", {}); let n = 0, si = 0; const seq = [];
+    Object.keys(att).sort().forEach(d => { const s = att[d][pid]; if (s === "si" || s === "no" || s === "just") { n++; if (s === "si") si++; seq.push(s); } });
+    return {n, si, pct: n ? Math.round(si/n*100) : null, last3: seq.slice(-3)};
+  }
+  const tColor = p => p == null ? "var(--faint)" : p >= 90 ? "var(--c-salud)" : p >= 75 ? "var(--gold)" : "var(--danger)";
+
+  function tDrill(d){
+    const w = 120, h = 90;
+    let s = `<svg viewBox="0 0 ${w} ${h}" aria-hidden="true"><rect x="4" y="4" width="${w-8}" height="${h-8}" rx="4" fill="none" stroke="#4f6b58" stroke-width="1"/><line x1="${w/2}" y1="4" x2="${w/2}" y2="${h-4}" stroke="#4f6b58" stroke-width=".8"/><circle cx="${w/2}" cy="${h/2}" r="10" fill="none" stroke="#4f6b58" stroke-width=".8"/>`;
+    (d.g||[]).forEach(([x,y]) => s += `<rect x="${x-3}" y="${y-10}" width="6" height="20" fill="none" stroke="#ece8e1" stroke-width="1.4"/>`);
+    (d.a||[]).forEach(([x1,y1,x2,y2]) => { const ang = Math.atan2(y2-y1,x2-x1), L = 5; s += `<line x1="${x1}" y1="${y1}" x2="${x2}" y2="${y2}" stroke="#c9a96e" stroke-width="1.2" stroke-dasharray="3 2"/><path d="M${x2} ${y2} L${x2-L*Math.cos(ang-0.5)} ${y2-L*Math.sin(ang-0.5)} L${x2-L*Math.cos(ang+0.5)} ${y2-L*Math.sin(ang+0.5)}Z" fill="#c9a96e"/>`; });
+    (d.c||[]).forEach(([x,y]) => s += `<path d="M${x} ${y-4} L${x+3.5} ${y+3} L${x-3.5} ${y+3}Z" fill="#e8a25c"/>`);
+    (d.p||[]).forEach(([x,y]) => s += `<circle cx="${x}" cy="${y}" r="4.5" fill="#8fa3ff"/>`);
+    (d.r||[]).forEach(([x,y]) => s += `<circle cx="${x}" cy="${y}" r="4.5" fill="#e07a6f"/>`);
+    (d.b||[]).forEach(([x,y]) => s += `<circle cx="${x}" cy="${y}" r="2.6" fill="#fff"/>`);
+    return s + "</svg>";
+  }
+  const tDraw = e => tDrill((T_D[e.d] || T_D.libre)());
+  const tTimeline = (list, len) => `<div class="tl">${list.map(e => `<span style="width:${Math.min(100, e.m/len*100)}%;background:${T_CAT[e.c][1]}"></span>`).join("")}</div>`;
+
+  // ---------- pantallas ----------
+  function renderTeam(c){
+    const box = el("div",{class:"team"});
+    const tabs = [["hoy","Hoy"],["lista","Lista"],["plantilla","Plantilla"],["sesion","Sesión"],["partidos","Partidos"],["progreso","Progreso"]];
+    let html = `<div class="tseg" role="tablist">${tabs.map(([k,l]) => `<button type="button" data-t="tab" data-v="${k}" aria-pressed="${tTab===k}">${l}</button>`).join("")}</div>`;
+    html += ({hoy:tHoy, lista:tLista, plantilla:tPlantilla, sesion:tSesion, partidos:tPartidos, progreso:tProgreso}[tTab])();
+    box.innerHTML = html;
+    c.append(box);
+  }
+
+  function tHoy(){
+    const cfg = tCfg(), pl = tPlayers(), next = tNext();
+    let h = "";
+    if (!cfg.days.length || !pl.length) {
+      h += `<div class="focus"><small>Para empezar</small><b>${!cfg.days.length ? "Dime qué días entrenáis" : "Añade a tus jugadores"}</b>
+        <span>${!cfg.days.length ? "Con los días y la hora, la app sabe cuándo es el próximo entreno y cuánto dura la sesión." : "Con la plantilla puedes pasar lista y apuntar cómo mejora cada uno."}</span>
+        <button type="button" class="tbtn" data-t="${!cfg.days.length ? "cfg" : "plAdd"}">${!cfg.days.length ? "Elegir días y hora" : "Añadir jugador"}</button></div>`;
+    }
+    if (next) {
+      const sess = (tGet("sess", {})[next] || []).map(tEx).filter(Boolean), len = tLen(cfg);
+      const tot = sess.reduce((s,e) => s+e.m, 0);
+      const att = tGet("att", {})[next] || {}, present = Object.values(att).filter(v => v === "si").length;
+      const marked = Object.keys(att).length;
+      h += `<div class="tcard"><small class="lbl">Próximo entreno</small><b class="big">${next === todayISO() ? "Hoy" : next === iso(addDays(new Date(),1)) ? "Mañana" : tFmt(next)}</b>
+        <div class="tmeta">${cfg.ini ? `<span>${cfg.ini}${cfg.fin ? " – "+cfg.fin : ""}</span>` : ""}<span>${pl.length} ${pl.length === 1 ? "niño" : "niños"}</span><span>${tot ? `sesión de ${tot} de ${len} min` : "sin sesión preparada"}</span></div>
+        ${sess.length ? tTimeline(sess, len) : ""}
+        <div class="trow2"><button type="button" class="tbtn" data-t="goLista" data-v="${next}">${marked ? `Lista: ${present} de ${pl.length}` : "Pasar lista"}</button><button type="button" class="tbtn ghost" data-t="tab" data-v="sesion">${sess.length ? "Ver sesión" : "Preparar sesión"}</button></div></div>`;
+    }
+    const up = tGet("matches", {list:[]}).list.filter(m => m.date >= todayISO() && m.gf == null).sort((a,b) => (a.date+a.hora) < (b.date+b.hora) ? -1 : 1)[0];
+    if (up) h += `<div class="tcard"><small class="lbl">Próximo partido</small><b class="big">contra ${esc(up.rival)}</b>
+      <div class="tmeta"><span>${tFmt(up.date)}</span>${up.hora ? `<span>${esc(up.hora)}</span>` : ""}${up.lugar ? `<span>${up.lugar === "casa" ? "En casa" : "Fuera"}</span>` : ""}</div>
+      ${up.quedada || up.campo ? `<span class="hint">${up.quedada ? "Quedada a las "+esc(up.quedada) : ""}${up.quedada && up.campo ? " en " : ""}${esc(up.campo||"")}</span>` : ""}</div>`;
+    // avisos
+    const al = [];
+    pl.forEach(p => { const s = tAttStats(p.id); if (s.last3.length === 3 && s.last3.every(x => x !== "si")) al.push(["var(--danger)", `<b>${esc(p.n)}</b> ha faltado a los 3 últimos entrenos.`]); });
+    const rate = tGet("rate", {}), sinEval = pl.filter(p => !(rate[p.id] && rate[p.id][tYM()]));
+    if (pl.length && sinEval.length && new Date().getDate() >= 15) al.push(["var(--gold)", `${sinEval.length === pl.length ? "Aún no has evaluado a nadie" : `Te ${sinEval.length === 1 ? "falta" : "faltan"} ${sinEval.length} por evaluar`} este mes. Un minuto por niño en Progreso.`]);
+    const att = tGet("att", {}), ym = tYM(), mDates = Object.keys(att).filter(d => d.startsWith(ym));
+    if (mDates.length && pl.length) {
+      let n = 0, si = 0; mDates.forEach(d => Object.values(att[d]).forEach(s => { if (s !== "pend") { n++; if (s === "si") si++; } }));
+      if (n) al.push(["var(--c-salud)", `Asistencia media de ${MONL[new Date().getMonth()]}: <b>${Math.round(si/n*100)} %</b> en ${mDates.length} ${mDates.length === 1 ? "entreno" : "entrenos"}.`]);
+    }
+    if (al.length) h += `<section><p class="lbl tl-h">Para tener en cuenta</p><div>${al.map(([c,t]) => `<div class="talert"><i style="background:${c}"></i><div>${t}</div></div>`).join("")}</div></section>`;
+    h += `<button type="button" class="ghost" data-t="cfg" style="align-self:flex-start">Días, horario y nombre del equipo</button>`;
+    return h;
+  }
+
+  function tLista(){
+    const pl = tPlayers(), date = tListDate || tNext() || todayISO();
+    if (!pl.length) return `<div class="empty"><b>Aún no hay jugadores</b>Añádelos en Plantilla y luego pasas lista con un toque.<button type="button" class="ghost" data-t="plAdd">Añadir jugador</button></div>`;
+    const att = tGet("att", {})[date] || {};
+    const c = {si:0, no:0, just:0}; pl.forEach(p => { const s = att[p.id]; if (c[s] != null) c[s]++; });
+    const lab = {si:"Viene", no:"Falta", just:"Avisó"};
+    return `<div class="attop"><b>${c.si}<small> de ${pl.length}</small></b><label class="hint">Día<input type="date" data-t="listDate" value="${date}"></label></div>
+      <div class="hint">${c.no} faltan · ${c.just} avisaron · ${pl.length - c.si - c.no - c.just} sin marcar</div>
+      <div class="attgrid">${pl.map(p => `<button type="button" class="chip" data-t="att" data-v="${p.id}" data-s="${att[p.id] || "pend"}"><span class="n">${esc(p.d || "")}</span><span class="nm">${esc(p.n)}</span><span class="st">${lab[att[p.id]] || "—"}</span></button>`).join("")}</div>
+      <p class="hint">Toca una vez si viene, otra si falta y otra si avisó. Se guarda solo.</p>
+      <div class="trow2"><button type="button" class="tbtn ghost" data-t="allin" data-v="${date}">Todos vienen</button><button type="button" class="tbtn ghost" data-t="clearList" data-v="${date}">Borrar lista</button></div>`;
+  }
+
+  function tPlantilla(){
+    const pl = tPlayers();
+    let h = `<div class="tsh"><span class="lbl">${pl.length} ${pl.length === 1 ? "jugador" : "jugadores"}</span><button type="button" data-t="plAdd">+ Añadir</button></div>`;
+    if (!pl.length) return h + `<div class="empty"><b>Plantilla vacía</b>Añade a cada niño con su nombre, dorsal y un teléfono de contacto.</div>`;
+    h += `<div class="pl">${pl.map(p => { const s = tAttStats(p.id); return `<button type="button" class="pr" data-t="plOpen" data-v="${p.id}">
+      <span class="dor">${esc(p.d || "·")}</span><span class="who"><b>${esc(p.n)}</b><small>${T_POS[p.p] || ""}</small></span>
+      <span class="pct">${s.pct == null ? "—" : s.pct+" %"}<span class="track"><span style="width:${s.pct||0}%;background:${tColor(s.pct)}"></span></span></span></button>`; }).join("")}</div>
+      <p class="hint">El porcentaje es la asistencia de las listas que has pasado. Toca un jugador para ver o cambiar su ficha.</p>`;
+    return h;
+  }
+
+  function tSesion(){
+    const cfg = tCfg(), date = tNext(), len = tLen(cfg);
+    if (!date) return `<div class="empty"><b>¿Qué días entrenáis?</b>Dímelo y preparas aquí la sesión del próximo entreno.<button type="button" class="ghost" data-t="cfg">Elegir días y hora</button></div>` + tLib();
+    const ids = tGet("sess", {})[date] || [], list = ids.map(tEx).filter(Boolean);
+    const tot = list.reduce((s,e) => s+e.m, 0);
+    let acc = 0; const start = cfg.ini ? mins(cfg.ini) : null;
+    let h = `<div class="tcard"><div class="ttot"><span>${tFmt(date)}${cfg.ini ? " · "+cfg.ini : ""}</span><b>${tot} <small>de ${len} min</small></b></div>
+      ${tTimeline(list, len)}
+      ${tot > len ? `<span class="hint" style="color:var(--danger)">Te pasas ${tot-len} min. Quita o cambia algún ejercicio.</span>` : tot < len ? `<span class="hint">Te quedan ${len-tot} min libres.</span>` : `<span class="hint" style="color:var(--c-salud)">Sesión completa.</span>`}`;
+    if (list.length) h += `<div class="sess">${list.map((e,i) => { const t0 = start != null ? start + acc : null; acc += e.m;
+      return `<div class="si"><span class="tm">${t0 != null ? Math.floor(t0/60)+":"+pad(t0%60) : acc - e.m + "′"}</span><button type="button" class="tt" data-t="exOpen" data-v="${e.id}"><b>${esc(e.t)}</b><small><i style="background:${T_CAT[e.c][1]}"></i>${T_CAT[e.c][0]} · ${e.m} min</small></button>
+      <span class="mv"><button type="button" data-t="sUp" data-v="${i}" aria-label="Subir">↑</button><button type="button" data-t="sDown" data-v="${i}" aria-label="Bajar">↓</button><button type="button" data-t="sRm" data-v="${i}" aria-label="Quitar">×</button></span></div>`; }).join("")}</div>`;
+    else h += `<span class="hint">Añade ejercicios de abajo o deja que te haga una sesión equilibrada.</span>`;
+    h += `<div class="trow2"><button type="button" class="tbtn" data-t="sAuto">${list.length ? "Hacer otra sesión" : "Hazme una sesión"}</button>${list.length ? `<button type="button" class="tbtn ghost" data-t="sClear">Vaciar</button>` : ""}</div></div>`;
+    return h + tLib();
+  }
+  function tLib(){
+    const lib = tAllEx().filter(e => tCatF === "todos" || e.c === tCatF);
+    return `<section><div class="tsh"><span class="lbl">Ejercicios</span><button type="button" data-t="myexNew">+ Nuevo</button></div>
+      <div class="tseg small">${[["todos","Todos"], ...Object.entries(T_CAT).map(([k,v]) => [k, v[0]])].map(([k,v]) => `<button type="button" data-t="cat" data-v="${k}" aria-pressed="${tCatF===k}">${v}</button>`).join("")}</div>
+      <p class="hint">${lib.length} ejercicios básicos. Toca uno para ver cómo se hace.</p>
+      <div class="lib">${lib.map(e => `<button type="button" class="ej" data-t="exOpen" data-v="${e.id}">${tDraw(e)}<span class="bd"><b>${esc(e.t)}</b><small>${T_CAT[e.c][0]} · ${esc(e.mat||"")}</small><span class="add"><span>${e.m} min</span>Ver</span></span></button>`).join("")}</div></section>`;
+  }
+
+  function tPartidos(){
+    const all = tGet("matches", {list:[]}).list, t = todayISO();
+    const up = all.filter(m => m.gf == null && m.date >= t).sort((a,b) => (a.date+a.hora) < (b.date+b.hora) ? -1 : 1);
+    const past = all.filter(m => !(m.gf == null && m.date >= t)).sort((a,b) => a.date < b.date ? 1 : -1);
+    let h = `<div class="tsh"><span class="lbl">Próximos</span><button type="button" data-t="mOpen" data-v="">+ Partido</button></div>`;
+    h += up.length ? `<div class="res">${up.map(m => `<button type="button" class="rr" data-t="mOpen" data-v="${m.id}"><span class="sc">${parse(m.date).getDate()}<small>${MONL[parse(m.date).getMonth()].slice(0,3)}</small></span><span class="tx"><b>contra ${esc(m.rival)}</b><small>${cap(DLONG[wdOf(parse(m.date))])}${m.hora ? " · "+esc(m.hora) : ""}${m.lugar ? " · "+(m.lugar === "casa" ? "en casa" : "fuera") : ""}${m.campo ? " · "+esc(m.campo) : ""}</small></span></button>`).join("")}</div>`
+      : `<p class="hint">No hay partidos apuntados.</p>`;
+    if (past.length) {
+      const w = past.filter(m => m.gf > m.gc).length, d = past.filter(m => m.gf != null && m.gf === m.gc).length, l = past.filter(m => m.gf < m.gc).length;
+      h += `<div class="tsh"><span class="lbl">Resultados</span><span class="hint">${w} ganados · ${d} empatados · ${l} perdidos</span></div>
+      <div class="res">${past.map(m => { const r = m.gf == null ? "" : m.gf > m.gc ? "v" : m.gf === m.gc ? "e" : "d";
+        return `<button type="button" class="rr" data-t="mOpen" data-v="${m.id}"><span class="sc">${m.gf == null ? "?" : m.gf+"–"+m.gc}</span><span class="tx"><b>contra ${esc(m.rival)}</b><small>${tFmt(m.date)}${m.notas ? " · "+esc(m.notas) : m.gf == null ? " · toca para apuntar el resultado" : ""}</small></span>${r ? `<span class="wl ${r}">${{v:"Victoria",e:"Empate",d:"Derrota"}[r]}</span>` : ""}</button>`; }).join("")}</div>`;
+    }
+    return h;
+  }
+
+  function tChart(){
+    const rate = tGet("rate", {}), months = {};
+    Object.values(rate).forEach(byM => Object.entries(byM).forEach(([ym, r]) => { (months[ym] = months[ym] || []).push(r.v); }));
+    const keys = Object.keys(months).sort().slice(-6);
+    if (!keys.length) return `<p class="hint">Cuando evalúes a los niños verás aquí cómo mejora el equipo mes a mes.</p>`;
+    const avg = (k, i) => { const a = months[k].map(v => v[i]).filter(x => x > 0); return a.length ? a.reduce((s,x) => s + x, 0) / a.length : null; };
+    const W = 320, H = 150, pl = 28, pr = 14, pt = 12, pb = 26, n = keys.length;
+    const x = i => n === 1 ? (pl + W - pr)/2 : pl + i*(W-pl-pr)/(n-1), y = v => pt + (5-v)/4*(H-pt-pb);
+    let s = `<svg class="chart" viewBox="0 0 ${W} ${H}" role="img" aria-label="Media del equipo por mes">`;
+    [1,2,3,4,5].forEach(v => s += `<line x1="${pl}" x2="${W-pr}" y1="${y(v)}" y2="${y(v)}" stroke="#26242b"/><text x="${pl-8}" y="${y(v)+3.5}" fill="#7d7983" font-size="10" text-anchor="end">${v}</text>`);
+    keys.forEach((k,i) => s += `<text x="${x(i)}" y="${H-8}" fill="#7d7983" font-size="10" text-anchor="middle">${cap(MONL[Number(k.slice(5))-1].slice(0,3))}</text>`);
+    [[0,"#7fcfa5"],[1,"#c9a96e"]].forEach(([i,c]) => {
+      const pts = keys.map((k,j) => [j, avg(k,i)]).filter(q => q[1] != null);
+      if (pts.length > 1) s += `<polyline points="${pts.map(([j,v]) => x(j)+","+y(v)).join(" ")}" fill="none" stroke="${c}" stroke-width="2" stroke-linejoin="round"/>`;
+      pts.forEach(([j,v]) => s += `<circle cx="${x(j)}" cy="${y(v)}" r="${j === n-1 ? 4 : 2.5}" fill="${c}"/>`);
+    });
+    const last = keys[n-1], f = v => v == null ? "—" : v.toFixed(1).replace(".", ",");
+    return s + `</svg><div class="legend"><span><i style="background:#7fcfa5"></i>Técnica ${f(avg(last,0))}</span><span><i style="background:#c9a96e"></i>Actitud ${f(avg(last,1))}</span></div>`;
+  }
+  function tProgreso(){
+    const pl = tPlayers();
+    let h = `<div class="tcard"><small class="lbl">Media del equipo, de 1 a 5</small>${tChart()}</div>`;
+    if (!pl.length) return h + `<p class="hint">Añade jugadores en Plantilla para evaluarlos.</p>`;
+    if (!tProg || !pl.find(p => p.id === tProg)) tProg = pl[0].id;
+    const p = pl.find(x => x.id === tProg), rate = tGet("rate", {}), ym = tYM();
+    const cur = (rate[p.id] && rate[p.id][ym]) || null, v = cur ? cur.v : [0,0,0,0];
+    const prevK = rate[p.id] ? Object.keys(rate[p.id]).filter(k => k < ym).sort().pop() : null;
+    const done = pl.filter(x => rate[x.id] && rate[x.id][ym]).length;
+    h += `<div class="tsh"><span class="lbl">Evaluar en ${MONL[new Date().getMonth()]}</span><span class="hint">${done} de ${pl.length} hechos</span></div>
+      <div class="tseg small">${pl.map(x => `<button type="button" data-t="prog" data-v="${x.id}" aria-pressed="${x.id === tProg}">${rate[x.id] && rate[x.id][ym] ? "✓ " : ""}${esc(x.n)}</button>`).join("")}</div>
+      <div class="tcard"><div class="ttot"><span class="pn">${esc(p.n)}</span>${cur && v.some(x => x > 0) ? `<span>Media <b>${(v.filter(x => x > 0).reduce((a,b) => a+b, 0)/v.filter(x => x > 0).length).toFixed(1).replace(".", ",")}</b></span>` : `<span>Sin evaluar</span>`}</div>
+      <div class="rate">${T_AREAS.map((a,k) => `<div class="rt"><span>${a}${prevK ? `<small> antes ${rate[p.id][prevK].v[k]}</small>` : ""}</span><span class="dots">${[1,2,3,4,5].map(n => `<button type="button" class="${n <= v[k] ? "on" : ""}" data-t="rate" data-v="${k}:${n}" aria-label="${a} ${n}">${n}</button>`).join("")}</span></div>`).join("")}</div>
+      <textarea class="tnote" data-t="note" data-v="${p.id}" rows="3" placeholder="Una nota corta: qué ha mejorado, en qué fijarse…">${esc(cur ? cur.n || "" : "")}</textarea></div>
+      <p class="hint">Una vez al mes, un minuto por niño. Así ves cuánto mejora cada uno durante la temporada.</p>`;
+    return h;
+  }
+
+  // ---------- hojas ----------
+  const tBg = el("div",{class:"sheet-bg", id:"teamBg", hidden:""});
+  document.body.append(tBg);
+  function tOpen(html){ tBg.innerHTML = `<div class="sheet tsheet">${html}</div>`; tBg.hidden = false; const f = tBg.querySelector("input,textarea"); if (f && !DESK.matches && f.dataset.auto) f.focus(); }
+  function tClose(){ tBg.hidden = true; tBg.innerHTML = ""; }
+  tBg.addEventListener("click", e => { if (e.target === tBg) tClose(); });
+  const tTop = (title) => `<div class="ttop"><h2>${title}</h2><button type="button" class="x" data-t="close" aria-label="Cerrar">×</button></div>`;
+
+  function tPlayerSheet(id){
+    const p = id ? tPlayers().find(x => x.id === id) : {n:"", d:"", p:"", tel:"", padre:"", nota:""};
+    const s = id ? tAttStats(id) : null;
+    tOpen(`${tTop(id ? esc(p.n) : "Nuevo jugador")}
+      ${s ? `<div class="tmeta"><span>Asistencia ${s.pct == null ? "sin datos" : `<b style="color:${tColor(s.pct)}">${s.pct} %</b> (${s.si} de ${s.n})`}</span></div>` : ""}
+      <form data-form="pl" data-v="${id || ""}" class="tform">
+        <div class="row2"><div class="field"><label for="tpN">Nombre</label><input type="text" id="tpN" name="n" value="${esc(p.n)}" maxlength="40" required></div>
+        <div class="field"><label for="tpD">Dorsal</label><input type="number" id="tpD" name="d" value="${esc(p.d)}" min="0" max="99" inputmode="numeric"></div></div>
+        <div class="field"><span class="lbl">Posición</span><div class="seg">${Object.entries(T_POS).map(([k,v]) => `<button type="button" data-t="pick" data-v="${k}" aria-pressed="${p.p === k}">${v}</button>`).join("")}</div><input type="hidden" name="p" value="${esc(p.p)}"></div>
+        <div class="row2"><div class="field"><label for="tpP">Contacto</label><input type="text" id="tpP" name="padre" value="${esc(p.padre)}" placeholder="Madre, padre…" maxlength="50"></div>
+        <div class="field"><label for="tpT">Teléfono</label><input type="tel" id="tpT" name="tel" value="${esc(p.tel)}" maxlength="20"></div></div>
+        <div class="field"><label for="tpO">Notas</label><textarea id="tpO" name="nota" rows="3" maxlength="400">${esc(p.nota)}</textarea></div>
+        <div class="actions"><button type="button" data-t="close">Cancelar</button><button type="submit" class="primary">Guardar</button></div>
+        ${id ? `<div class="dangerzone">${p.tel ? `<button type="button" data-t="copy" data-v="${esc(p.tel)}" style="color:var(--soft)">Copiar teléfono</button>` : ""}<button type="button" data-t="plDel" data-v="${id}">Borrar jugador</button></div>` : ""}
+      </form>`);
+  }
+  function tCfgSheet(){
+    const cfg = tCfg();
+    tOpen(`${tTop("Tu equipo")}
+      <form data-form="cfg" class="tform">
+        <div class="field"><label for="tcN">Nombre del equipo</label><input type="text" id="tcN" name="name" value="${esc(cfg.name)}" placeholder="Benjamín A" maxlength="40"></div>
+        <div class="field"><span class="lbl">Días de entreno</span><div class="wdays">${DL.map((l,i) => `<button type="button" data-t="day" data-v="${i}" aria-pressed="${cfg.days.includes(i)}">${l}</button>`).join("")}</div></div>
+        <div class="row2"><div class="field"><label for="tcI">Empieza</label><input type="time" id="tcI" name="ini" value="${esc(cfg.ini)}"></div>
+        <div class="field"><label for="tcF">Acaba</label><input type="time" id="tcF" name="fin" value="${esc(cfg.fin)}"></div></div>
+        <span class="hint">Con la hora de inicio y fin, la sesión se ajusta a lo que dura el entreno.</span>
+        <div class="actions"><button type="button" data-t="close">Cancelar</button><button type="submit" class="primary">Guardar</button></div>
+      </form>`);
+  }
+  function tExSheet(id){
+    const e = tEx(id); if (!e) return;
+    const date = tNext(), mine = id.startsWith("u_");
+    tOpen(`${tTop(esc(e.t))}<div class="exfig">${tDraw(e)}</div>
+      <div class="tmeta"><span style="color:${T_CAT[e.c][1]}">${T_CAT[e.c][0]}</span><span>${e.m} min</span>${e.mat ? `<span>${esc(e.mat)}</span>` : ""}</div>
+      ${e.h ? `<div class="how"><span class="lbl">Cómo se hace</span><p>${esc(e.h)}</p></div>` : ""}
+      ${e.o ? `<div class="how"><span class="lbl">Cómo repartirlos (10 niños y 2 entrenadores)</span><p>${esc(e.o)}</p></div>` : ""}
+      ${e.f ? `<div class="how"><span class="lbl">Si les cuesta</span><p>${esc(e.f)}</p></div>` : ""}
+      ${date ? `<div class="actions"><button type="button" class="primary" data-t="exAdd" data-v="${e.id}">Añadir a la sesión del ${DLONG[wdOf(parse(date))]}</button></div>` : `<p>Elige los días de entreno en Hoy para poder montar sesiones.</p>`}
+      ${mine ? `<div class="dangerzone"><button type="button" data-t="myexDel" data-v="${e.id}">Borrar este ejercicio</button></div>` : ""}`);
+  }
+  function tMyExSheet(){
+    tOpen(`${tTop("Nuevo ejercicio")}
+      <form data-form="myex" class="tform">
+        <div class="field"><label for="txT">Nombre</label><input type="text" id="txT" name="t" maxlength="60" required></div>
+        <div class="field"><span class="lbl">Tipo</span><div class="seg">${Object.entries(T_CAT).map(([k,v]) => `<button type="button" data-t="pick" data-v="${k}" aria-pressed="${k === "jue"}">${v[0]}</button>`).join("")}</div><input type="hidden" name="c" value="jue"></div>
+        <div class="row2"><div class="field"><label for="txM">Minutos</label><input type="number" id="txM" name="m" value="10" min="1" max="60" inputmode="numeric" required></div>
+        <div class="field"><label for="txMat">Material</label><input type="text" id="txMat" name="mat" maxlength="60"></div></div>
+        <div class="field"><label for="txH">Cómo se hace</label><textarea id="txH" name="h" rows="3" maxlength="500"></textarea></div>
+        <div class="actions"><button type="button" data-t="close">Cancelar</button><button type="submit" class="primary">Guardar</button></div>
+      </form>`);
+  }
+  function tMatchSheet(id){
+    const m = id ? tGet("matches", {list:[]}).list.find(x => x.id === id) : {date: iso(addDays(new Date(), (12 - new Date().getDay()) % 7 || 7)), hora:"", rival:"", campo:"", quedada:"", lugar:"casa"};
+    if (!m) return;
+    const played = id && m.date <= todayISO();
+    tOpen(`${tTop(id ? "Contra "+esc(m.rival) : "Nuevo partido")}
+      <form data-form="match" data-v="${id || ""}" class="tform">
+        <div class="field"><label for="tmR">Rival</label><input type="text" id="tmR" name="rival" value="${esc(m.rival)}" maxlength="50" required></div>
+        <div class="row2"><div class="field"><label for="tmD">Día</label><input type="date" id="tmD" name="date" value="${esc(m.date)}" required></div>
+        <div class="field"><label for="tmH">Hora</label><input type="time" id="tmH" name="hora" value="${esc(m.hora)}"></div></div>
+        <div class="field"><span class="lbl">Dónde</span><div class="seg"><button type="button" data-t="pick" data-v="casa" aria-pressed="${m.lugar === "casa"}">En casa</button><button type="button" data-t="pick" data-v="fuera" aria-pressed="${m.lugar === "fuera"}">Fuera</button></div><input type="hidden" name="lugar" value="${esc(m.lugar||"")}"></div>
+        <div class="row2"><div class="field"><label for="tmC">Campo</label><input type="text" id="tmC" name="campo" value="${esc(m.campo)}" maxlength="60"></div>
+        <div class="field"><label for="tmQ">Quedada</label><input type="time" id="tmQ" name="quedada" value="${esc(m.quedada)}"></div></div>
+        ${played || (id && m.gf != null) ? `<div class="row2"><div class="field"><label for="tmGF">Goles nuestros</label><input type="number" id="tmGF" name="gf" value="${m.gf ?? ""}" min="0" max="99" inputmode="numeric"></div>
+        <div class="field"><label for="tmGC">Goles suyos</label><input type="number" id="tmGC" name="gc" value="${m.gc ?? ""}" min="0" max="99" inputmode="numeric"></div></div>
+        <div class="field"><label for="tmN">Notas</label><textarea id="tmN" name="notas" rows="2" maxlength="300" placeholder="Quién marcó, qué salió bien…">${esc(m.notas||"")}</textarea></div>` : id ? `<span class="hint">El día del partido podrás apuntar aquí el resultado.</span>` : ""}
+        <div class="actions"><button type="button" data-t="close">Cancelar</button><button type="submit" class="primary">Guardar</button></div>
+        ${id ? `<div class="dangerzone"><button type="button" data-t="mDel" data-v="${id}">Borrar partido</button></div>` : ""}
+      </form>`);
+  }
+
+  function tAuto(len){
+    const pick = arr => arr[Math.floor(Math.random()*arr.length)];
+    const ex = tAllEx(), by = c => ex.filter(e => e.c === c);
+    const out = [pick(by("cal").filter(e => e.m <= 10)) || pick(by("cal"))];
+    const end = pick(by("vc").filter(e => e.m <= 5)) || pick(by("vc"));
+    let rem = len - out[0].m - end.m;
+    const par = rem >= 30 ? pick(by("par").filter(e => e.m <= 15)) : null;
+    if (par) rem -= par.m;
+    const cats = ["con","pas","tir","reg","jue"].sort(() => Math.random() - .5);
+    for (const c of cats) { if (rem < 8) break; const o = by(c).filter(e => e.m <= rem); if (o.length) { const e = pick(o); out.push(e); rem -= e.m; } }
+    if (par) out.push(par);
+    out.push(end);
+    return out.map(e => e.id);
+  }
+
+  function tArm(b, label){ if (b.dataset.armed) return true; b.dataset.armed = "1"; b.textContent = label; setTimeout(() => { if (b.isConnected) { delete b.dataset.armed; } }, 4000); return false; }
+
+  document.addEventListener("click", e => {
+    const b = e.target.closest("[data-t]"); if (!b || !b.closest(".team, #teamBg")) return;
+    const t = b.dataset.t, v = b.dataset.v;
+    const next = tNext();
+    const sessMod = fn => { const all = tGet("sess", {}); const l = all[next] || []; fn(l); all[next] = l; tSet("sess", all); };
+    switch (t) {
+      case "tab": tTab = v; render(); window.scrollTo(0,0); break;
+      case "goLista": tListDate = v; tTab = "lista"; render(); window.scrollTo(0,0); break;
+      case "cat": tCatF = v; render(); break;
+      case "att": { const date = tListDate || next || todayISO(); const all = tGet("att", {}); const d = all[date] || {}; const order = ["si","no","just"]; const cur = d[v]; d[v] = order[(order.indexOf(cur)+1) % 3]; all[date] = d; tSet("att", all); break; }
+      case "allin": { const all = tGet("att", {}); const d = all[v] || {}; tPlayers().forEach(p => d[p.id] = "si"); all[v] = d; tSet("att", all); break; }
+      case "clearList": { if (!tArm(b, "¿Seguro? Toca otra vez")) break; const all = tGet("att", {}); delete all[v]; tSet("att", all); break; }
+      case "plAdd": tPlayerSheet(null); break;
+      case "plOpen": tPlayerSheet(v); break;
+      case "plDel": { if (!tArm(b, "¿Borrar? Toca otra vez")) break; const P = tGet("players", {list:[]}); P.list = P.list.filter(p => p.id !== v); tClose(); tSet("players", P); toast("Jugador borrado"); break; }
+      case "copy": navigator.clipboard && navigator.clipboard.writeText(v).then(() => toast("Teléfono copiado"), () => toast("No se pudo copiar")); break;
+      case "cfg": tCfgSheet(); break;
+      case "day": b.setAttribute("aria-pressed", String(b.getAttribute("aria-pressed") !== "true")); break;
+      case "pick": { const seg = b.parentElement; seg.querySelectorAll("button").forEach(x => x.setAttribute("aria-pressed", String(x === b))); seg.parentElement.querySelector("input[type=hidden]").value = v; break; }
+      case "close": tClose(); break;
+      case "exOpen": tExSheet(v); break;
+      case "exAdd": if (next) { sessMod(l => l.push(v)); tClose(); toast("Añadido a la sesión"); } break;
+      case "myexNew": tMyExSheet(); break;
+      case "myexDel": { if (!tArm(b, "¿Borrar? Toca otra vez")) break; const M = tGet("myex", {list:[]}); M.list = M.list.filter(x => x.id !== v); tClose(); tSet("myex", M); break; }
+      case "sUp": sessMod(l => { const i = +v; if (i > 0) [l[i-1], l[i]] = [l[i], l[i-1]]; }); break;
+      case "sDown": sessMod(l => { const i = +v; if (i < l.length-1) [l[i+1], l[i]] = [l[i], l[i+1]]; }); break;
+      case "sRm": sessMod(l => l.splice(+v, 1)); break;
+      case "sAuto": { const all = tGet("sess", {}); all[next] = tAuto(tLen(tCfg())); tSet("sess", all); break; }
+      case "sClear": { if (!tArm(b, "¿Vaciar? Toca otra vez")) break; sessMod(l => l.splice(0)); break; }
+      case "mOpen": tMatchSheet(v || null); break;
+      case "mDel": { if (!tArm(b, "¿Borrar? Toca otra vez")) break; const M = tGet("matches", {list:[]}); M.list = M.list.filter(x => x.id !== v); tClose(); tSet("matches", M); break; }
+      case "prog": tProg = v; render(); break;
+      case "rate": { const [k, n] = v.split(":").map(Number); const R = tGet("rate", {}); const ym = tYM(); R[tProg] = R[tProg] || {}; const cur = R[tProg][ym] || {v:[0,0,0,0], n:""}; cur.v[k] = n; R[tProg][ym] = cur; tSet("rate", R); break; }
+    }
+  });
+  document.addEventListener("change", e => {
+    const x = e.target; if (!x.closest || !x.closest(".team")) return;
+    if (x.dataset.t === "listDate" && x.value) { tListDate = x.value; render(); }
+    if (x.dataset.t === "note") { const R = tGet("rate", {}); const ym = tYM(); R[x.dataset.v] = R[x.dataset.v] || {}; const cur = R[x.dataset.v][ym] || {v:[0,0,0,0], n:""}; cur.n = x.value.trim(); R[x.dataset.v][ym] = cur; tPut("rate", R); toast("Nota guardada"); }
+  });
+  document.addEventListener("submit", e => {
+    const f = e.target; if (!f.dataset || !f.dataset.form || !f.closest("#teamBg")) return;
+    e.preventDefault();
+    const d = Object.fromEntries(new FormData(f).entries()), id = f.dataset.v;
+    if (f.dataset.form === "pl") {
+      const P = tGet("players", {list:[]}); const n = d.n.trim(); if (!n) return;
+      const rec = {n, d: d.d.trim(), p: d.p, padre: d.padre.trim(), tel: d.tel.trim(), nota: d.nota.trim()};
+      if (id) P.list = P.list.map(p => p.id === id ? Object.assign({}, p, rec) : p); else P.list.push(Object.assign({id: tid()}, rec));
+      tClose(); tSet("players", P); toast(id ? "Ficha guardada" : `${n} añadido a la plantilla`);
+    } else if (f.dataset.form === "cfg") {
+      const days = [...f.querySelectorAll("[data-t=day]")].filter(b => b.getAttribute("aria-pressed") === "true").map(b => +b.dataset.v);
+      tClose(); tSet("cfg", {name: d.name.trim(), days, ini: d.ini, fin: d.fin}); toast("Guardado");
+    } else if (f.dataset.form === "myex") {
+      const M = tGet("myex", {list:[]}); const m = Math.max(1, Math.min(60, parseInt(d.m) || 10));
+      M.list.push({id: "u_"+tid(), t: d.t.trim(), c: d.c || "jue", m, mat: d.mat.trim(), h: d.h.trim(), d: "libre"});
+      tCatF = "todos"; tClose(); tSet("myex", M); toast("Ejercicio guardado");
+    } else if (f.dataset.form === "match") {
+      const M = tGet("matches", {list:[]});
+      const rec = {rival: d.rival.trim(), date: d.date, hora: d.hora, campo: (d.campo||"").trim(), quedada: d.quedada, lugar: d.lugar};
+      if ("gf" in d) { rec.gf = d.gf === "" ? null : +d.gf; rec.gc = d.gc === "" ? null : +d.gc; if (rec.gf == null || rec.gc == null) { rec.gf = null; rec.gc = null; } rec.notas = (d.notas||"").trim(); }
+      if (id) M.list = M.list.map(m => m.id === id ? Object.assign({}, m, rec) : m); else M.list.push(Object.assign({id: tid(), gf: null, gc: null}, rec));
+      tClose(); tSet("matches", M); toast("Partido guardado");
+    }
+  });
+  document.addEventListener("keydown", e => { if (e.key === "Escape" && !tBg.hidden) tClose(); });
+
+
   function renderWeek(c, days){
     days.forEach((d,i) => {
       const k = iso(d), list = forDay(k);
@@ -1192,6 +1749,7 @@ button.num:hover b{color:var(--gold)}
   $("vWeek").onclick = () => { view="week"; render(); };
   $("vSum").onclick = () => { view="sum"; render(); };
   $("vLife").onclick = () => { view="vida"; render(); };
+  $("vTeam").onclick = () => { view="equipo"; render(); window.scrollTo(0,0); };
   $("vDay").addEventListener("click", () => { if (DESK.matches) { view="day"; render(); } });
 
   // refresca "ahora" cada minuto, sin molestar si estás escribiendo
