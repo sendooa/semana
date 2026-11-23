@@ -26,6 +26,7 @@ alter table public.items enable row level security;
 create policy "cada uno ve lo suyo" on public.items
   for all using (auth.uid() = user_id) with check (auth.uid() = user_id);
 create index if not exists items_updated on public.items (user_id, updated_at);
+grant select, insert, update, delete on public.items to authenticated;
 ```
 
 3. En **Authentication → Sign In / Providers → Email**, desactiva *Confirm email* (así entras directamente desde la app).

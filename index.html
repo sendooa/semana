@@ -500,8 +500,13 @@ button.num:hover b{color:var(--gold)}
       writeJSON(PULL_KEY, last);
       if (changed) { local.write(); ensureBase(); render(); }
       setStatus("on", "Sincronizado");
+      { const m = document.getElementById("acctMsg"); if (m && /error|Falta|Supabase no/.test(m.textContent)) m.textContent = ""; }
     } catch(e) {
       setStatus("err", "Error al sincronizar");
+      const m = document.getElementById("acctMsg"); const t = (e && (e.message || e.code)) || String(e);
+      if (m) m.textContent = /does not exist|PGRST20[25]|schema cache/i.test(t) ? "Falta crear la tabla en Supabase (paso del SQL). Detalle: " + t
+        : /permission denied|42501/i.test(t) ? "Supabase no da permiso a la tabla (falta el GRANT del SQL). Detalle: " + t
+        : "Detalle del error: " + t;
     } finally { syncing = false; }
   }
 
