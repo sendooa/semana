@@ -188,7 +188,12 @@ main .wrap{padding-block:18px 140px;display:flex;flex-direction:column;gap:20px}
 .field label,.lbl{font-size:.64rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
 .sheet input[type=text],.sheet input[type=date],.sheet input[type=time]{font:inherit;font-size:16px;color:var(--fg);background:var(--bg);border:1px solid var(--line2);border-radius:12px;padding:10px;width:100%;box-sizing:border-box;min-width:0;-webkit-appearance:none;appearance:none;min-height:44px}
 .sheet input:focus{outline:none;border-color:var(--gold)}
-.row3{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:8px}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.tp{display:flex;align-items:center;gap:4px}
+.tp b{color:var(--muted);font-weight:400}
+.tp select{flex:1;min-width:0;font:inherit;font-size:16px;color:var(--fg);background:var(--bg);border:1px solid var(--line2);border-radius:12px;padding:10px 8px;min-height:44px;-webkit-appearance:none;appearance:none;text-align:center;text-align-last:center;font-variant-numeric:tabular-nums}
+.tp select:focus{outline:none;border-color:var(--gold)}
+.tp select:disabled{color:var(--faint)}
 .seg{display:flex;gap:6px;flex-wrap:wrap}
 .seg button{border:1px solid var(--line2);border-radius:999px;padding:7px 12px;font-size:.8rem;display:flex;align-items:center;gap:7px;color:var(--soft)}
 .seg button i{width:7px;height:7px;border-radius:50%;background:var(--cat)}
@@ -259,10 +264,14 @@ main .wrap{padding-block:18px 140px;display:flex;flex-direction:column;gap:20px}
       <label for="fTitle">Qué</label>
       <input type="text" id="fTitle" placeholder="Clase, gimnasio, comprar pan…" required maxlength="120">
     </div>
-    <div class="row3">
-      <div class="field"><label for="fDate">Día</label><input type="date" id="fDate" required></div>
-      <div class="field"><label for="fTime">Desde</label><input type="time" id="fTime"></div>
-      <div class="field"><label for="fEnd">Hasta</label><input type="time" id="fEnd"></div>
+    <div class="field"><label for="fDate">Día</label><input type="date" id="fDate" required></div>
+    <div class="row2">
+      <div class="field"><span class="lbl">Desde</span>
+        <div class="tp"><select id="fTimeH" aria-label="Hora de inicio"></select><b>:</b><select id="fTimeM" aria-label="Minutos de inicio"></select></div>
+        <input type="hidden" id="fTime"></div>
+      <div class="field"><span class="lbl">Hasta</span>
+        <div class="tp"><select id="fEndH" aria-label="Hora de fin"></select><b>:</b><select id="fEndM" aria-label="Minutos de fin"></select></div>
+        <input type="hidden" id="fEnd"></div>
     </div>
     <div class="field">
       <span class="lbl">Repetir cada semana</span>
@@ -779,6 +788,7 @@ main .wrap{padding-block:18px 140px;display:flex;flex-direction:column;gap:20px}
     $("fDate").value = it ? it.date : (date || selected);
     $("fTime").value = it ? (it.time||"") : "";
     $("fEnd").value = it ? (it.end||"") : "";
+    paintTime("fTime"); paintTime("fEnd");
     const rep = !!(it && it.repeat && it.repeat.length);
     $("dz").hidden = !it; $("delOne").hidden = !rep;
     $("delAll").textContent = rep ? "Borrar todos los días" : "Borrar";
@@ -786,6 +796,25 @@ main .wrap{padding-block:18px 140px;display:flex;flex-direction:column;gap:20px}
     $("sheetBg").hidden = false;
     if (!it) setTimeout(()=>$("fTitle").focus(), 50);
   }
+  // selector de hora en formato 24 h (no depende del idioma del dispositivo)
+  function buildTime(id){
+    const H = $(id+"H"), M = $(id+"M");
+    H.append(el("option",{value:""}, "--"));
+    for (let h = 0; h < 24; h++) H.append(el("option",{value:pad(h)}, pad(h)));
+    for (let m = 0; m < 60; m += 5) M.append(el("option",{value:pad(m)}, pad(m)));
+    const sync = () => { $(id).value = H.value ? H.value+":"+(M.value||"00") : ""; M.disabled = !H.value; };
+    H.addEventListener("change", () => { if (H.value && !M.value) M.value = "00"; sync();
+      if (id === "fTime" && H.value && !$("fEndH").value) { $("fEndH").value = pad(Math.min(23, +H.value + 1)); $("fEndM").value = M.value; $("fEndH").dispatchEvent(new Event("change")); } });
+    M.addEventListener("change", sync);
+  }
+  function paintTime(id){
+    const H = $(id+"H"), M = $(id+"M"), v = $(id).value;
+    const [h, m] = v ? v.split(":") : ["", ""];
+    if (m && !M.querySelector(`option[value="${m}"]`)) M.append(el("option",{value:m}, m));
+    H.value = h; M.value = m || "00"; M.disabled = !h;
+  }
+  buildTime("fTime"); buildTime("fEnd");
+
   function closeForm(){ $("sheetBg").hidden = true; }
 
   $("form").addEventListener("submit", e => {
