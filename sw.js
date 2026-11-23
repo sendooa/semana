@@ -1,5 +1,5 @@
 // Mi Semana: guarda la app para que abra sin conexión.
-const VERSION = "mi-semana-v1";
+const VERSION = "mi-semana-v2";
 const CORE = ["./", "index.html", "config.js", "manifest.webmanifest", "icons/icon-192.png", "icons/apple-touch-icon.png"];
 
 self.addEventListener("install", e => {

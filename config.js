@@ -1,6 +1,5 @@
-// Datos públicos de Supabase para sincronizar entre dispositivos.
-// Déjalos vacíos para usar la app solo en este dispositivo.
+// Conexión con Supabase. La clave "publishable" es pública por diseño: los datos están protegidos por RLS.
 window.MS_CONFIG = {
-  supabaseUrl: "",
-  supabaseAnonKey: ""
+  supabaseUrl: "https://wwlhequhhbgglavgnthm.supabase.co",
+  supabaseAnonKey: "sb_publishable_OczrAsA2avotceIhEeVP1g_j65JAMcW"
 };
