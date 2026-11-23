@@ -108,6 +108,7 @@ main .wrap{padding-block:18px 140px;display:flex;flex-direction:column;gap:20px}
 .empty{padding:26px 0 8px;display:flex;flex-direction:column;gap:12px;align-items:flex-start;color:var(--muted);font-size:.9rem;line-height:1.5}
 .empty b{font-family:var(--serif);font-weight:400;font-size:1.3rem;color:var(--fg)}
 .ghost{border:1px solid var(--line2);border-radius:999px;padding:8px 14px;font-size:.8rem;color:var(--soft)}
+.addday{align-self:flex-start}
 .ghost:hover{border-color:var(--gold);color:var(--gold)}
 
 .tom{display:flex;justify-content:space-between;gap:12px;font-size:.78rem;color:var(--muted);padding-top:4px}
@@ -587,6 +588,7 @@ main .wrap{padding-block:18px 140px;display:flex;flex-direction:column;gap:20px}
     } else {
       if (isToday) c.append(el("div",{class:"sec"},"Agenda"));
       c.append(el("ul",{class:"rows"}, list.map(([id,it]) => row(id,it,selected,true))));
+      c.append(el("button",{class:"ghost addday", type:"button", onclick:()=>openForm(null, selected)},"+ Añadir algo a este día"));
     }
 
     // adelanto del día siguiente
